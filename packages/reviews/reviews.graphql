@@ -10,7 +10,7 @@ type Query {
   reviews: [Review]
 }
 
-# we convert our Product interface into an object type for this subgraph locally, and add the
+# we declare our Product interface as an object type for this subgraph locally, and add the
 # @interfaceObject directive so that composition knows it's actually an interface in the Federated API
 type Product @key(fields: "id") @interfaceObject {
   id: ID!

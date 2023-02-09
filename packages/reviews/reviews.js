@@ -26,10 +26,6 @@ const resolvers = {
   },
 
   Product: {
-    __resolveReference(reference) {
-      // console.log(JSON.stringify(reference));
-      return allProducts.find((obj) => obj.id === reference.id);
-    },
     reviews: (item) => item.reviews,
   },
 
