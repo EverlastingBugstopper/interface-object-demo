@@ -13,7 +13,6 @@ interface Product @key(fields: "id") {
   price: Float!
 }
 
-# Book entity with a primary key
 type Book implements Product @key(fields: "id") {
   id: ID!
   title: String!
