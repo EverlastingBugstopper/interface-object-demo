@@ -30,7 +30,7 @@ const resolvers = {
       }
     },
 
-    // Reference resolver to resolve the implementation type of the abstracted objects returned by the `reviews` subgraph
+    // Reference resolver for interface key
     __resolveReference(reference) {
       return allProducts.find((obj) => obj.id === reference.id);
     },

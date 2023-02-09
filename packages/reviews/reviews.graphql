@@ -13,8 +13,6 @@ type Query {
 # @interfaceObject directive so that composition knows it's actually an interface in the Federated API
 type Product @key(fields: "id") @interfaceObject {
   id: ID!
-  # title: String!
-  # price: Float!
   reviews: [Review!]!
 }
 
