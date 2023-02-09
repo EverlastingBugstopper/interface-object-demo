@@ -4,7 +4,6 @@ extend schema
     import: ["@key", "@interfaceObject"]
   )
 
-# subgraph 'reviews'
 type Query {
   allReviewedProducts: [Product!]!
   reviews: [Review]

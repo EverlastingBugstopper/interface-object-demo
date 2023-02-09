@@ -29,8 +29,8 @@ const resolvers = {
         return "Movie";
       }
     },
-    // Our __resolveReference for the Product interface object's key, so that the
-    // query planner can resolve a particular instance of an interface object.
+
+    // Reference resolver to resolve the implementation type of the abstracted objects returned by the `reviews` subgraph
     __resolveReference(reference) {
       return allProducts.find((obj) => obj.id === reference.id);
     },
@@ -39,9 +39,6 @@ const resolvers = {
     price: (obj) => obj.price,
   },
   Book: {
-    __resolveReference(reference) {
-      return books.find((book) => book.id === reference.id);
-    },
     id: (book) => book.id,
     title: (book) => book.title,
     price: (book) => book.price,
@@ -49,9 +46,6 @@ const resolvers = {
     ISBN: (book) => book.ISBN,
   },
   Movie: {
-    __resolveReference(reference) {
-      return movies.find((movie) => movie.id === reference.id);
-    },
     id: (movie) => movie.id,
     title: (movie) => movie.title,
     price: (movie) => movie.price,
