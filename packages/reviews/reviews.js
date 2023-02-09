@@ -26,6 +26,10 @@ const resolvers = {
   },
 
   Product: {
+    // Reference resolver to resolve the implementation type of the abstracted objects returned by the `reviews` subgraph
+    __resolveReference(reference) {
+      return allProducts.find((obj) => obj.id === reference.id);
+    },
     reviews: (item) => item.reviews,
   },
 
