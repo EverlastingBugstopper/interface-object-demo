@@ -1,0 +1,10 @@
+{
+  "name": "reviews",
+  "version": "0.0.1",
+  "description": "",
+  "main": "reviews.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon reviews.js"
+  }
+}

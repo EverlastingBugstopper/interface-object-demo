@@ -1,0 +1,14 @@
+{
+  "name": "products",
+  "version": "1.0.0",
+  "description": "",
+  "main": "products.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon products.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}

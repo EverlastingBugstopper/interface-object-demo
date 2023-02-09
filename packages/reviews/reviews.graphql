@@ -1,0 +1,27 @@
+extend schema
+  @link(
+    url: "https://specs.apollo.dev/federation/v2.3"
+    import: ["@key", "@interfaceObject"]
+  )
+
+# subgraph 'reviews'
+type Query {
+  allReviewedProducts: [Product!]!
+  reviews: [Review]
+}
+
+# we convert our Product interface into an object type for this subgraph locally, and add the
+# @interfaceObject directive so that composition knows it's actually an interface in the Federated API
+type Product @key(fields: "id") @interfaceObject {
+  id: ID!
+  # title: String!
+  # price: Float!
+  reviews: [Review!]!
+}
+
+type Review {
+  id: ID!
+  reviewer: String!
+  content: String!
+  rating: Int!
+}

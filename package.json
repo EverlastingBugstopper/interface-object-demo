@@ -1,0 +1,23 @@
+{
+  "name": "root",
+  "version": "0.0.1",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "npx lerna run start",
+    "compose": "npx lerna run compose"
+  },
+  "dependencies": {
+    "@apollo/gateway": "2.3.0",
+    "@apollo/server": "4.3.2",
+    "@apollo/subgraph": "2.3.0",
+    "apollo-server": "3.11.1",
+    "graphql": "16.6.0"
+  },
+  "devDependencies": {
+    "@apollo/rover": "0.11.0",
+    "lerna": "6.4.1",
+    "nodemon": "2.0.20"
+  }
+}

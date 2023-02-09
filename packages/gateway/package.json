@@ -1,0 +1,10 @@
+{
+  "name": "gateway",
+  "version": "0.0.1",
+  "main": "gateway.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon gateway.js",
+    "compose": "rover supergraph compose --config ./supergraph-config.yaml > supergraph.graphql"
+  }
+}

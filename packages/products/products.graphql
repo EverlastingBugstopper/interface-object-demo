@@ -1,0 +1,31 @@
+extend schema
+  @link(url: "https://specs.apollo.dev/federation/v2.3", import: ["@key"])
+
+# Subgraph products
+type Query {
+  products: [Product!]!
+}
+
+# key for interface
+interface Product @key(fields: "id") {
+  id: ID!
+  title: String!
+  price: Float!
+}
+
+# Book entity with a primary key
+type Book implements Product @key(fields: "id") {
+  id: ID!
+  title: String!
+  price: Float!
+  author: String!
+  ISBN: String!
+}
+
+type Movie implements Product @key(fields: "id") {
+  id: ID!
+  title: String!
+  price: Float!
+  director: String!
+  duration: Int!
+}
