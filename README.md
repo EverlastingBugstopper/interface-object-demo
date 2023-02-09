@@ -1,6 +1,6 @@
 # README
 
-This is a demo repo for the new interfaceObject feature, available in Federation 2.3
+This is a demo repo for the new `@interfaceObject` feature, available in Federation 2.3
 
 **To run local composition:**
 
