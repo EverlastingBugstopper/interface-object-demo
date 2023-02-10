@@ -62,7 +62,7 @@ const server = new ApolloServer({
 });
 
 server
-  .listen({ port: port })
+  .listen({ port: process.env.PORT || port })
   .then(({ url }) => {
     console.log(`🚀 Reviews subgraph ready at ${url}`);
   })
