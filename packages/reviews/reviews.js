@@ -2,8 +2,8 @@ import { ApolloServer, gql } from "apollo-server";
 import { readFileSync } from "fs";
 import { buildSubgraphSchema } from "@apollo/subgraph";
 
-import { bookReviews, movieReviews } from "../shared/reviews-data.js";
-import { books, movies } from "../shared/all-data.js";
+import { bookReviews, movieReviews } from "./shared/reviews-data.js";
+import { books, movies } from "./shared/all-data.js";
 
 let typeDefs;
 
