@@ -6,5 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "nodemon reviews.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
