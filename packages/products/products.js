@@ -2,7 +2,7 @@ import { ApolloServer, gql } from "apollo-server";
 import { readFileSync } from "fs";
 import { buildSubgraphSchema } from "@apollo/subgraph";
 import { books, movies } from "./shared/products-data.js";
-
+// comment
 let typeDefs;
 
 try {
